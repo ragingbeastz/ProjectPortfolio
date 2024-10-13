@@ -11,27 +11,18 @@
 <body>
     
     <!-- Header -->
-    <div class="flex-container header" style="justify-content: space-between;">
-        <div class="flex-container" style="justify-content: flex-end;"></div>
-            <div class="flex-container" style=" gap: 10px;">
-                <div style="color: #B6BAC1;">View Projects</div>
-                <div style="color: #B6BAC1;">About Me</div>
-                <div style="color: #B6BAC1;">Contact Me</div>
-            </div>
-        </div>
-    </div>
 
     <!-- Hero -->
-    <div class="flex-container hero" style="flex-direction: column; width: 100vw; height: 100vh; justify-content: center; align-items: center;" id="heroContainer">
-        <div class="flex-container" style="flex-direction: column;">
-            <div class="heroText">Good <span id="greeting"></span>. <br> I'm <span style="color: #FF4D5A;">Dimithri</span>, <br>a student at the University of Hull studying <br><span style="color: #FF4D5A;">Robotics and Artifical intelligience</span></div>
-            <div><button></button></div>
+    <div class="flex-container hero" style="flex-direction: column; width: 100vw; height: 100vh; justify-content: center; align-items: center; flex-basis: auto; gap: 0px;" id="heroContainer">
+        <div class="flex-container" style="flex-direction: column; z-index: 1; align-content: center;">
+            <div class="heroText" style="padding-bottom: 10%; padding-top: 10%;">Good <span id="greeting"></span>. I'm <span style="color: #FF4D5A;">Dimithri</span>, <br>a student at the University of Hull studying <br><span style="color: #FF4D5A;">Robotics and Artifical Intelligience</span></div>
+            <div class="button" id="scrollButton" style="width: 10%; align-self: center; padding-top: 0%;"><button></button></div>
         </div>
         
     </div>
 
     <!-- Information -->
-    <div class="flex-container" style="flex-direction: column; justify-content: center; align-items: center;">
+    <div class="flex-container" id="projects" style="flex-direction: column; justify-content: center; align-items: center;">
         <div style="padding: 20px; font-size: 36px; color: #1F2937; font-weight:900;">Some random information</div>
         <div class="flex-container" style="gap: 5%; justify-content: center; padding-bottom: 5%;">
             <div class="flex-container-information-box">

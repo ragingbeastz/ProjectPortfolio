@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const dot = document.createElement('div');
         dot.className = 'dot';
         dot.style.position = 'absolute';
+        dot.style.zIndex = '0'; // Ensure dots are behind other elements
         const size = `${Math.random() * 10}px`;
         dot.style.width = size;
         dot.style.height = size;
@@ -54,28 +55,27 @@ document.addEventListener('DOMContentLoaded', () => {
             dot.style.left = `${x}px`;
             dot.style.top = `${y}px`;
         });
-        }
-    
+    }
 
     function calculateOpacity(dot, mouseX, mouseY) {
         const dotX = parseFloat(dot.style.left) + 5;  // Assuming dot width is 10px, center it
         const dotY = parseFloat(dot.style.top) + 5;   // Centering the dot vertically
         const distance = Math.sqrt((mouseX - dotX) ** 2 + (mouseY - dotY) ** 2);
-    
+
         // Set a maximum range for opacity to start fading (100px in this case)
         const maxDistance = 500;
-    
+
         // If distance is greater than maxDistance, opacity is 0; otherwise, calculate proportional opacity
         let opacity = 1 - (distance / maxDistance);
         opacity = Math.max(opacity, 0); // Ensure opacity doesn't go below 0
-    
+
         // Increase size as mouse gets closer
         const minSize = 5; // Minimum size in px
         const maxSize = 15; // Maximum size in px
         const size = minSize + (maxSize - minSize) * (1 - distance / maxDistance);
         dot.style.width = `${size}px`;
         dot.style.height = `${size}px`;
-    
+
         return opacity;
     }
 
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const rect = heroContainer.getBoundingClientRect();
         const mouseX = e.clientX - rect.left;
         const mouseY = e.clientY - rect.top;
-    
+
         dots.forEach(dot => {
             // Calculate the opacity based on the distance from the mouse
             const opacity = calculateOpacity(dot, mouseX, mouseY);
@@ -115,5 +115,16 @@ function GetTimeReference() {
     
     document.getElementById('greeting').innerText = greeting;  
 }
+
+//Button
+const scrollButton = document.getElementById('scrollButton');
+const flexboxContainer = document.getElementById('projects');
+scrollButton.addEventListener('click', function() {
+    // Scroll the flexbox into view
+    flexboxContainer.scrollIntoView({
+        behavior: 'smooth',  // Smooth scrolling
+        block: 'start'       // Align to the top of the viewport
+    });
+});
 
 window.onload = GetTimeReference;
