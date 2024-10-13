@@ -1,5 +1,6 @@
-*{
-    font-family: 'Roboto', sans-serif;
+body{
+    font-family: montserrat, sans-serif;
+    background-color: #1A1A1A;
     margin: 0px;
 }
 
@@ -8,9 +9,9 @@
 }
 
 .header{
-    background-color: #313131;
     padding: 20px;
     text-wrap: nowrap;
+    background-color: #313131;
 }
 
 .hero{
@@ -22,8 +23,24 @@
 .heroText{
     color: white;
     text-wrap:  wrap;
-    font-size: 75px;
+    font-size: 3vw;
     font-weight: bold;
+}
+
+.buttonHero{
+    padding: 2%; 
+    padding-left: 10%; 
+    padding-right: 10%; 
+    background-color: #FF4D5A;
+    color: white; 
+    text-align: center; 
+    font-size: 1vw; 
+    border-radius: 10px;
+    text-wrap: nowrap;
+
+    width: 15vw;
+    height: 5vh;
+    
 }
 
 .button{
@@ -52,10 +69,11 @@
 }
 
 .informationText {
-    padding: 10px;
+    padding: 5%;
     text-align: center;
-    font-size: 15px;
-    color: #1F2937;
+    text-wrap: wrap;
+    font-size: 36px;
+    color: white;
 }
 
 .quote{

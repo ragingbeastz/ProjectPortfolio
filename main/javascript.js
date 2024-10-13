@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
         dot.className = 'dot';
         dot.style.position = 'absolute';
         dot.style.zIndex = '0'; // Ensure dots are behind other elements
-        const size = `${Math.random() * 10}px`;
+        const size = `${Math.random() * 7}px`;
         dot.style.width = size;
         dot.style.height = size;
         dot.style.borderRadius = '50%';
         dot.style.backgroundColor = getRandomColor();
-        dot.style.left = `${Math.random() * heroContainer.clientWidth}px`;
-        dot.style.top = `${Math.random() * heroContainer.clientHeight}px`;
+        dot.style.left = `${Math.random() * 100}%`;
+        dot.style.top = `${Math.random() * 100}%`;
         dot.style.opacity = 0;
         heroContainer.appendChild(dot);
         dots.push(dot);
@@ -22,14 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to get a random color
     function getRandomColor() {
-        const colors = ['#FF0000', '#0000FF']; // Red and Blue colors
+        const colors = ['#FFFFFF', '#FF4D59']; // Red and Blue colors
         const color = colors[Math.floor(Math.random() * colors.length)];
         return color;
     }
 
     // Function to move dots in arcs and curves
     function moveDots() {
-        const speed = 0.5; // Speed variable
+        const speed = 0.05; // Speed variable
         dots.forEach(dot => {
             let x = parseFloat(dot.style.left);
             let y = parseFloat(dot.style.top);
@@ -43,23 +43,24 @@ document.addEventListener('DOMContentLoaded', () => {
             x += dot.dx;
             y += dot.dy;
 
-            if (x < 0 || x > heroContainer.clientWidth - 10) {
+            if (x < 0 || x > 100) {
                 dot.dx = -dot.dx; // Reverse direction on x-axis
-                x = Math.max(0, Math.min(x, heroContainer.clientWidth - 10));
+                x = Math.max(0, Math.min(x, 100));
             }
-            if (y < 0 || y > heroContainer.clientHeight - 10) {
+            if (y < 0 || y > 100) {
                 dot.dy = -dot.dy; // Reverse direction on y-axis
-                y = Math.max(0, Math.min(y, heroContainer.clientHeight - 10));
+                y = Math.max(0, Math.min(y, 100));
             }
 
-            dot.style.left = `${x}px`;
-            dot.style.top = `${y}px`;
+            dot.style.left = `${x}%`;
+            dot.style.top = `${y}%`;
         });
     }
 
     function calculateOpacity(dot, mouseX, mouseY) {
-        const dotX = parseFloat(dot.style.left) + 5;  // Assuming dot width is 10px, center it
-        const dotY = parseFloat(dot.style.top) + 5;   // Centering the dot vertically
+        const rect = heroContainer.getBoundingClientRect();
+        const dotX = (parseFloat(dot.style.left) / 100) * rect.width;
+        const dotY = (parseFloat(dot.style.top) / 100) * rect.height;
         const distance = Math.sqrt((mouseX - dotX) ** 2 + (mouseY - dotY) ** 2);
 
         // Set a maximum range for opacity to start fading (100px in this case)
@@ -71,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Increase size as mouse gets closer
         const minSize = 5; // Minimum size in px
-        const maxSize = 15; // Maximum size in px
+        const maxSize = 10; // Maximum size in px
         const size = minSize + (maxSize - minSize) * (1 - distance / maxDistance);
         dot.style.width = `${size}px`;
         dot.style.height = `${size}px`;
@@ -118,7 +119,7 @@ function GetTimeReference() {
 
 //Button
 const scrollButton = document.getElementById('scrollButton');
-const flexboxContainer = document.getElementById('projects');
+const flexboxContainer = document.getElementById('header');
 scrollButton.addEventListener('click', function() {
     // Scroll the flexbox into view
     flexboxContainer.scrollIntoView({
