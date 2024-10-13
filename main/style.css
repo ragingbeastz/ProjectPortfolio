@@ -8,13 +8,21 @@
 }
 
 .header{
-    background-color: #1F2937;
+    background-color: #313131;
     padding: 20px;
     text-wrap: nowrap;
 }
 
 .hero{
-    background-color: #1F2937;
+    background-color: #1A1A1A;
+}
+
+.heroText{
+    color: white;
+    text-wrap:  wrap;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20%;
 }
 
 .button{
