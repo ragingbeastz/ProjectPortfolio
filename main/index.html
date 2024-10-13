@@ -10,14 +10,18 @@
 
 <body>
     <!-- Hero -->
-    <div class="flex-container hero" style="flex-direction: column; width: 100vw; height: 100vh; justify-content: center; align-items: center; flex-basis: auto; gap: 0px;" id="heroContainer">
+    <div class="flex-container hero"
+        style="flex-direction: column; width: 100vw; height: 100vh; justify-content: center; align-items: center; flex-basis: auto; gap: 0px;"
+        id="heroContainer">
         <div class="flex-container" style="flex-direction: column; z-index: 1;">
-            <div class="heroText" style="padding-bottom: 10%; padding-top: 10%;">Good <span id="greeting"></span>. I'm <span style="color: #FF4D5A;">Dimithri</span>, <br>a student at the University of Hull studying <br><span style="color: #FF4D5A;">Robotics and Artifical Intelligience</span></div>
+            <div class="heroText" style="padding-bottom: 10%; padding-top: 10%;">Good <span id="greeting"></span>. I'm
+                <span style="color: #FF4D5A;">Dimithri</span>, <br>a student at the University of Hull studying
+                <br><span style="color: #FF4D5A;">Robotics and Artifical Intelligience</span></div>
             <div style="align-self: center;">
                 <button class="buttonHero" id="scrollButton">View My Projects</button>
             </div>
         </div>
-    </div>  
+    </div>
 
     <!-- Header -->
     <div class="flex-container header" id="header" style="justify-content: flex-end; background-color: #313131;">
@@ -32,44 +36,64 @@
 
     <!-- Information -->
     <div class="flex-container" style="flex-direction: column; justify-content: center; align-items: center;">
-        <div style="padding: 20px; font-size: 50px; color: white; font-weight:900; padding-bottom: 5%;">About Me</div>
-        <div><img src="../Assets/headIcon.png" style="filter: blur(0.5px); height: 10vw; width: auto;"></div>
+        <div style="padding: 20px; font-size: 50px; color: white; font-weight:900; padding-bottom: 2%;">About Me</div>
+        <div><img src="../Assets/headIcon.png" style="filter: blur(0.5px); height: 10vw; width: auto; padding-bottom: 10%;"></div>
         <div class="informationText" style="padding-left: 25%; padding-right: 25%;">
-            I am a second-year student at the University of Hull, 
-            pursuing a degree in Robotics and Artificial Intelligence. 
-            Through my studies, I have developed strong programming skills in C# and Python, 
-            alongside learning HTML, CSS, and JavaScript via the Odin Project. Outside of academics, I enjoy socializing, 
+            I am a second-year student at the University of Hull,
+            pursuing a degree in Robotics and Artificial Intelligence.
+            Through my studies, I have developed strong programming skills in C# and Python,
+            alongside learning HTML, CSS, and JavaScript via the Odin Project. Outside of academics, I enjoy
+            socializing,
             cooking, and playing games.
+        </div>
+        <div class="flex-container" style="padding-top: 5%; gap: 5%;">
+            <div><img src="../Assets/cSharpIcon.png" style=" height: 10vw; width: auto;"></div>
+            <div><img src="../Assets/pythonIcon.png" style=" height: 10vw; width: auto;"></div>
+        </div>
+        <div class="flex-container" style="padding-top: 2%; gap: 5%;">
+            <div><img src="../Assets/htmlIcon.png" style=" height: 10vw; width: auto;"></div>
+            <div><img src="../Assets/cssIcon.png" style= "height: 10vw; width: auto;"></div>
+            <div><img src="../Assets/javascriptIcon.png" style=" height: 10vw; width: auto;"></div>
         </div>
     </div>
 
-    <!-- Quote -->
-     <div class="flex-container quote" style="flex-direction: column; padding: 22.7%; padding-top: 10%; padding-bottom: 10%;">
-        <i class="quoteText">This is an inspiring quote, or a testimonial from a customer
-            . Maybe it's just filling up space, or maybe people will actually read it. Who knows?
-             All i know is that it looks nice.
-        </i>
-        <div class="flex-container" style="justify-content: end; align-items: end;">
-            <div style="font-weight: bolder; font-size: 25px;">-Thor, God of Thunder</div>
-        </div>
-     </div>
+    <!-- Projects Section -->
+    <div class="flex-container projects"
+        style="flex-direction: column; padding: 5%; justify-content: center; align-items: center;">
+        <div style="padding: 20px; font-size: 50px; color: white; font-weight: 900;">Projects</div>
 
-     <!-- Call to Action -->
-      <div class="flex-container" style="padding: 10%; justify-content: center;">
-        <div class="flex-container callToAction" style="padding: 5%; gap: 400px; justify-content: center; align-items: baseline;">
+        <!-- Younger Ring Project -->
+        <div class="project" style="padding: 20px; width: 20%; background-color: #2c2c2c; margin-bottom: 20px; align-self: flex-start;">
+            <h2 style="color: #FF4D5A;">Younger Ring</h2>
+            <p style="color: white;">
+                A Unity C# Game made to showcase my programming skills and for fun. The game is a 2D platformer
+                where the player must reach the end.
+            </p>
             <div class="flex-container" style="flex-direction: column;">
-                <div class="callToActionText1">Call to action! It's time!</div>
-                <div class="callToActionText2">Sign up for our product by clicking that button right over there!</div>
+                <a href="https://example.com/younger-ring-live" style="color: #FF4D5A; margin-bottom: 10px;">LIVE APP</a>
+                <a href="https://example.com/younger-ring-learn-more" style="color: #FF4D5A;">LEARN MORE</a>
             </div>
-            <button class="buttonCalltoAction">Sign Up</button>
-          </div>
-      </div>
+        </div>
 
-      <!-- Footer -->
-       <div class="flex-container footer" style="justify-content: center; align-items: center;">
-            <div>Copyright © Dimithri Technologies</div>
-       </div>
-       <script src="./javascript.js"></script>
+        <!-- Faster Flights Project -->
+        <div class="project" style="padding: 20px; width: 20%; background-color: #2c2c2c; margin-bottom: 20px; align-self: flex-end;">
+            <h2 style="color: #FF4D5A;">Faster Flights</h2>
+            <p style="color: white;">
+                Faster Flights is a Python-based project aimed at providing efficiency with searching for Ryanair flights from the Uk to Europe.
+            </p>
+            <div class="flex-container" style="flex-direction: column;">
+                <a href="https://example.com/faster-flights-live" style="color: #FF4D5A; margin-bottom: 10px;">LIVE APP</a>
+                <a href="https://example.com/faster-flights-learn-more" style="color: #FF4D5A;">LEARN MORE</a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="flex-container footer" style="justify-content: center; align-items: center;">
+        <div>Copyright © Dimithri Technologies</div>
+    </div>
+    <script src="./javascript.js"></script>
 </body>
 
 </html>
