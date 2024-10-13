@@ -69,6 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
         let opacity = 1 - (distance / maxDistance);
         opacity = Math.max(opacity, 0); // Ensure opacity doesn't go below 0
     
+        // Increase size as mouse gets closer
+        const minSize = 5; // Minimum size in px
+        const maxSize = 15; // Maximum size in px
+        const size = minSize + (maxSize - minSize) * (1 - distance / maxDistance);
+        dot.style.width = `${size}px`;
+        dot.style.height = `${size}px`;
+    
         return opacity;
     }
 
