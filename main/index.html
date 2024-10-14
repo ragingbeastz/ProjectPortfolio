@@ -7,6 +7,7 @@
     <title>Landing Page</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./footerButtons.css">
+    <link rel="stylesheet" href="./multipleButtons.css">
 </head>
 
 <body>
@@ -14,13 +15,15 @@
     <div class="flex-container hero"
         style="flex-direction: column; height: 100vh; width: auto; justify-content: center; align-items: center; flex-basis: auto; gap: 0px;"
         id="heroContainer">
-        <div class="flex-container" style="flex-direction: column; z-index: 1;">
+        <div class="flex-container" style="flex-direction: column; z-index: 1; justify-content: center;">
             <div class="heroText" style="padding-bottom: 10%; padding-top: 10%;">Good <span id="greeting"></span>. I'm
                 <span style="color: #FF4D5A;">Dimithri</span>, <br>a student at the University of Hull studying
                 <br><span style="color: #FF4D5A;">Robotics and Artifical Intelligience</span>
             </div>
-            <div style="align-self: center;">
-                <button class="buttonHero" id="scrollButton">View My Projects</button>
+            <div class="customButtons" style="align-self: center;">
+                <button class="customButtons btn btn-5" id="scrollButton" style="border-radius: 10px; font-size: 50px; color: white; background-color: #FF4D5A; text-wrap: nowrap; width: 30vw; height: 7vh;">
+                    View My Projects
+                </button>
             </div>
         </div>
     </div>
