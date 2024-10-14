@@ -144,7 +144,7 @@
 
 .customButtons .btn-2:hover,
 .customButtons .btn-2:active {
-  letter-spacing: 5px;
+  letter-spacing: 1px;
 }
 
 .customButtons .btn-2:after,
@@ -165,15 +165,17 @@
 .customButtons .btn-2:hover:before {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  border-color: #fff;
+  border-color: #FF4D5A;
   transition: width 350ms ease-in-out;
-  width: 70%;
+  width: 100%;
 }
 
 .customButtons .btn-2:hover:before {
-  bottom: auto;
+  bottom: 0;
   top: 0;
-  width: 70%;
+  width: 100%;
+  padding: 0%;
+  margin-bottom: 0%;
 }
 
 .customButtons .btn-3 {
