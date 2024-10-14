@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroContainer = document.getElementById('heroContainer');
     const dots = [];
 
+    // Ensure the container does not expand beyond the screen width
+    heroContainer.style.overflow = 'hidden';
+
     // Create dots
     for (let i = 0; i < 200; i++) {
         const dot = document.createElement('div');

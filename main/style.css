@@ -92,16 +92,18 @@ body{
     border-radius: 5px;
 }
 
-.callToActionText1{
+.contactText1{
     font-weight: bold;
     color: white;
     font-size: 30px;
+    padding-top: 1%;
 }
 
 
-.callToActionText2{
+.contactText2{
     color: rgb(207, 207, 207);
     font-size: 15   px;
+    padding: 10px;
 }
 
 .buttonCalltoAction{
