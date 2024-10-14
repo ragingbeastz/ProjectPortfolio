@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             x += dot.dx;
             y += dot.dy;
 
-            if (x < 10 || x > 90) {
+            if (x < 15 || x > 85) {
                 dot.dx = -dot.dx; // Reverse direction on x-axis
                 x = Math.max(0, Math.min(x, 100));
             }
