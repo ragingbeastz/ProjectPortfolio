@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dots = [];
 
     // Ensure the container does not expand beyond the screen width
-    heroContainer.style.overflow = 'hidden';
+    // heroContainer.style.overflow = 'hidden';
 
     // Create dots
     for (let i = 0; i < 200; i++) {
@@ -123,6 +123,19 @@ function GetTimeReference() {
 //Button
 const scrollButton = document.getElementById('scrollButton');
 const flexboxContainer = document.getElementById('header');
+
+const homeButton = document.getElementById('homeButton');
+const aboutButton = document.getElementById('aboutButton');
+const projectButton = document.getElementById('projectButton');
+const contactButton = document.getElementById('contactButton');
+
+const home = document.getElementById('home');
+const about = document.getElementById('about');
+const projectSection = document.getElementById('projectSection');
+const contact = document.getElementById('contact');
+
+
+
 scrollButton.addEventListener('click', function() {
     // Scroll the flexbox into view
     flexboxContainer.scrollIntoView({
@@ -130,5 +143,39 @@ scrollButton.addEventListener('click', function() {
         block: 'start'       // Align to the top of the viewport
     });
 });
+
+homeButton.addEventListener('click', function() {
+    // Scroll the flexbox into view
+    home.scrollIntoView({
+        behavior: 'smooth',  // Smooth scrolling
+        block: 'start'       // Align to the top of the viewport
+    });
+});
+
+aboutButton.addEventListener('click', function() {
+    // Scroll the flexbox into view
+    about.scrollIntoView({
+        behavior: 'smooth',  // Smooth scrolling
+        block: 'start'       // Align to the top of the viewport
+    });
+});
+
+projectButton.addEventListener('click', function() {
+    // Scroll the flexbox into view
+    projectSection.scrollIntoView({
+        behavior: 'smooth',  // Smooth scrolling
+        block: 'start'       // Align to the top of the viewport
+    });
+});
+
+contactButton.addEventListener('click', function() {
+    // Scroll the flexbox into view
+    contact.scrollIntoView({
+        behavior: 'smooth',  // Smooth scrolling
+        block: 'start'       // Align to the top of the viewport
+    });
+});
+
+
 
 window.onload = GetTimeReference;
