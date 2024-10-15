@@ -185,7 +185,7 @@ function handleSubmit(event) {
     const formData = new FormData(form);
 
     // Submit the form using Fetch API to Netlify
-    fetch("/", {
+    fetch("./", {
         method: "POST",
         body: formData,
     })
