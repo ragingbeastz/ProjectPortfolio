@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Unity Game</title>
+    <script src="../Assets/YoungerRingWeb/Build/YoungerRingWeb.loader.js"></script> <!-- Path to your UnityLoader.js -->
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        #unityContainer {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="unityContainer"></div>
+
+    <script>
+        var buildUrl = "../Assets/YoungerRingWeb/Build";  // Path to your build folder
+        var config = {
+            dataUrl: buildUrl + "/YourGame.data",
+            frameworkUrl: buildUrl + "/YourGame.framework.js",
+            codeUrl: buildUrl + "/YourGame.wasm",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "Your Company",
+            productName: "Your Product",
+            productVersion: "1.0",
+        };
+
+        var container = document.querySelector("#unityContainer");
+        UnityLoader.instantiate(container, buildUrl + "/YourGame.json", config);
+    </script>
+</body>
+</html>
