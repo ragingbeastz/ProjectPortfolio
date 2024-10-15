@@ -213,33 +213,6 @@
         </form>
     </div>
 
-    <script>
-    document.getElementById('sendButton').addEventListener('click', async () => {
-        const form = document.getElementById('contactForm');
-        const formData = new FormData(form);
-        const data = {};
-        formData.forEach((value, key) => {
-            data[key] = value;
-        });
-
-        try {
-            const response = await fetch('/.netlify/functions/send_email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            });
-
-            const result = await response.text();
-            alert(result);
-        } catch (error) {
-            console.error('Error:', error);
-            alert('Failed to send email.');
-        }
-    });
-    </script>
-
     <!-- Footer -->
     <div class="flex-container footer" style="justify-content: center; align-items: center; flex-direction: column;">
         <div class="flex-container" style="gap: 10px;">
