@@ -8,7 +8,17 @@ exports.handler = async (event, context) => {
     };
   }
 
-  const { name, email, message } = JSON.parse(event.body);
+  let data;
+  try {
+    data = JSON.parse(event.body);
+  } catch (error) {
+    return {
+      statusCode: 400,
+      body: 'Invalid JSON',
+    };
+  }
+
+  const { name, email, message } = data;
 
   // Create a transporter object using SMTP transport
   let transporter = nodemailer.createTransport({
