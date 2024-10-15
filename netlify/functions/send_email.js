@@ -12,6 +12,7 @@ exports.handler = async (event, context) => {
   try {
     data = JSON.parse(event.body);
   } catch (error) {
+    console.error('Error parsing JSON:', error);
     return {
       statusCode: 400,
       body: 'Invalid JSON',
@@ -41,14 +42,16 @@ exports.handler = async (event, context) => {
 
   try {
     await transporter.sendMail(mailOptions);
+    console.log('Email sent successfully');
     return {
       statusCode: 200,
       body: 'Email successfully sent!',
     };
   } catch (error) {
+    console.error('Error sending email:', error);
     return {
       statusCode: 500,
       body: `Failed to send email: ${error.message}`,
     };
   }
-};  
+};
