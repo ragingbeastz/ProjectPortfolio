@@ -177,5 +177,27 @@ contactButton.addEventListener('click', function() {
 });
 
 
+function handleSubmit(event) {
+    event.preventDefault();  // Prevent the default form submission
+
+    // Fetch the form data
+    const form = document.getElementById('contactForm');
+    const formData = new FormData(form);
+
+    // Submit the form using Fetch API to Netlify
+    fetch("/", {
+        method: "POST",
+        body: formData,
+    })
+    .then(() => {
+        alert('Message received!');  // Show an alert on successful submission
+        form.reset();  // Optionally, reset the form after submission
+    })
+    .catch((error) => {
+        console.error('Form submission error:', error);
+        alert('There was a problem submitting your form. Please try again.');
+    });
+}
+
 
 window.onload = GetTimeReference;
