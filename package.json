@@ -1,0 +1,15 @@
+{
+  "name": "projectportfolio",
+  "version": "1.0.0",
+  "description": "The website that I have created using HTML, CSS and JavaScript in order to showcase my programming projects online. Acts as a gateway for employers to get to know my skills and abilities.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.9.15"
+  }
+}

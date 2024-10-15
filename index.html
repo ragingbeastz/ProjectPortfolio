@@ -172,31 +172,23 @@
     </div>
 
     <!-- Contact Me Section -->
-    <div id="contact" class="flex-container"
-        style="flex-direction: column; justify-content: center; align-items: center;">
-        <div class="contactText1">
-            Contact
+    <form id="contactForm" class="flex-container" action="/.netlify/functions/send_email" method="POST"
+        style="flex-direction: column; padding: 5%; padding-bottom: 0%; gap: 5px; padding-top: 1%; width: 30%;">
+        <input type="text" name="name" placeholder="Name"
+            style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828;" required>
+        <input type="email" name="email" placeholder="Email"
+            style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828;" required>
+        <textarea name="message" placeholder="Message"
+            style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828; padding-bottom: 10%;"
+            required></textarea>
+    
+        <div class="customButtons" style="align-self: center;">
+            <button class="customButtons btn btn-5" id="scrollButton"
+                style="padding: 0%; border-radius: 10px; font-size: 25px; color: white; background-color: #FF4D5A; text-wrap: nowrap; width: 5vw; height: 5vh; align-self: center; margin-top: 20%;">
+                Send
+            </button>
         </div>
-        <div class="contactText2">
-            Have a project in mind or any employment opportunities? Feel free to contact me.
-        </div>
-        <form id="contactForm" class="flex-container" action="./send_email.php" method="POST"
-            style="flex-direction: column; padding: 5%; padding-bottom: 0%; gap: 5px; padding-top: 1%; width: 30%;">
-            <input type="text" name="name" placeholder="Name"
-                style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828;" required>
-            <input type="email" name="email" placeholder="Email"
-                style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828;" required>
-            <textarea name="message" placeholder="Message"
-                style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828; padding-bottom: 10%;" required></textarea>
-
-            <div class="customButtons" style="align-self: center;">
-                <button class="customButtons btn btn-5" id="scrollButton"
-                    style="padding: 0%; border-radius: 10px; font-size: 25px; color: white; background-color: #FF4D5A; text-wrap: nowrap; width: 5vw; height: 5vh; align-self: center; margin-top: 20%;">
-                    Send
-                </button>
-            </div>
-        </form>
-    </div>
+    </form>
 
     <!-- Footer -->
     <div class="flex-container footer" style="justify-content: center; align-items: center; flex-direction: column;">
