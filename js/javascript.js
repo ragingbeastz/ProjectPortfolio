@@ -177,9 +177,6 @@ contactButton.addEventListener('click', function() {
 });
 
 
-function handleSubmit(event) {
-    alert('Message received!');
-}
 
 
 window.onload = GetTimeReference;
