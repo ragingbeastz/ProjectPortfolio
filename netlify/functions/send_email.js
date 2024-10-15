@@ -22,17 +22,19 @@ exports.handler = async (event, context) => {
 
   // Create a transporter object using SMTP transport
   let transporter = nodemailer.createTransport({
-    service: 'Gmail',
+    host: 'smtp.zoho.com',
+    port: 465,
+    secure: true, // true for 465, false for other ports
     auth: {
-      user: 'your-email@gmail.com', // Replace with your email
-      pass: 'your-email-password', // Replace with your email password or app-specific password
+      user: process.env.EMAIL_USER, // Use environment variable
+      pass: process.env.EMAIL_PASS, // Use environment variable
     },
   });
 
   // Email details
   let mailOptions = {
     from: email,
-    to: 'your-email@gmail.com', // Replace with your email
+    to: process.env.EMAIL_USER, // Send to your email
     subject: 'New Contact Form Submission',
     text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
   };
@@ -49,4 +51,4 @@ exports.handler = async (event, context) => {
       body: `Failed to send email: ${error.message}`,
     };
   }
-};
+};  

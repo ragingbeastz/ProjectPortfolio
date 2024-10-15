@@ -190,16 +190,13 @@
             Have a project in mind or any employment opportunities? Feel free to contact me.
         </div>
         <form id="contactForm" class="flex-container"
-            style="flex-direction: column; padding: 5%; padding-bottom: 0%; gap: 5px; padding-top: 1%; width: 30%; justify-content: center;">
+            style="flex-direction: column; padding: 5%; padding-bottom: 0%; gap: 5px; padding-top: 1%; width: 30%;">
             <input type="text" name="name" placeholder="Name"
-                style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828;"
-                required>
+                style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828;" required>
             <input type="email" name="email" placeholder="Email"
-                style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828;"
-                required>
+                style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828;" required>
             <textarea name="message" placeholder="Message"
-                style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828; padding-bottom: 10%;"
-                required></textarea>
+                style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828; padding-bottom: 10%;" required></textarea>
 
             <div class="customButtons" style="align-self: center;">
                 <button type="button" class="customButtons btn btn-5" id="sendButton"
@@ -211,30 +208,30 @@
     </div>
 
     <script>
-        document.getElementById('sendButton').addEventListener('click', async () => {
-            const form = document.getElementById('contactForm');
-            const formData = new FormData(form);
-            const data = {};
-            formData.forEach((value, key) => {
-                data[key] = value;
+    document.getElementById('sendButton').addEventListener('click', async () => {
+        const form = document.getElementById('contactForm');
+        const formData = new FormData(form);
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+
+        try {
+            const response = await fetch('/.netlify/functions/send_email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
             });
 
-            try {
-                const response = await fetch('/.netlify/functions/send_email', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data),
-                });
-
-                const result = await response.text();
-                alert(result);
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Failed to send email.');
-            }
-        });
+            const result = await response.text();
+            alert(result);
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Failed to send email.');
+        }
+    });
     </script>
 
     <!-- Footer -->
