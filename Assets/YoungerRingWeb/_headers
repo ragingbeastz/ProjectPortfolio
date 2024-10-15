@@ -1,0 +1,15 @@
+/*.js.br
+  Content-Encoding: br
+  Content-Type: application/javascript
+
+/*.data.br
+  Content-Encoding: br
+  Content-Type: application/octet-stream
+
+/*.wasm.br
+  Content-Encoding: br
+  Content-Type: application/wasm
+
+/*.html.br
+  Content-Encoding: br
+  Content-Type: text/html
