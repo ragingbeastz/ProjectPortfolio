@@ -26,6 +26,7 @@ exports.handler = async (event, context) => {
     host: 'smtp.zoho.com',
     port: 465,
     secure: true, // true for 465, false for other ports
+    secureConnection: true, // Use SSL
     auth: {
       user: process.env.EMAIL_USER, // Use environment variable
       pass: process.env.EMAIL_PASS, // Use environment variable
