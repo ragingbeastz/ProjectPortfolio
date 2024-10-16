@@ -128,3 +128,33 @@ body{
     font-size: 40px;
     padding: 10%;
 }
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 1s, opacity 0.5s;
+}
+
+.slide-in.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.project-image {
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(0.95);
+}

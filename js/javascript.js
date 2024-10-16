@@ -177,6 +177,38 @@ contactButton.addEventListener('click', function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const slideInElements = document.querySelectorAll('.slide-in');
+    console.log('Slide-in elements:', slideInElements);
+
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        const inViewport = (
+            rect.top < window.innerHeight && rect.bottom > 0
+        );
+        console.log('Element:', element, 'Rect:', rect, 'is in viewport:', inViewport);
+        return inViewport;
+    }
+
+    function checkSlideIn() {
+        slideInElements.forEach(element => {
+            if (isInViewport(element)) {
+                if (!element.classList.contains('visible')) {
+                    console.log('Adding visible class to element:', element);
+                    element.classList.add('visible');
+                }
+            }
+        });
+    }
+
+    window.addEventListener('scroll', function() {
+        console.log('Scroll event detected');
+        checkSlideIn();
+    });
+
+    console.log('Initial check for slide-in elements');
+    checkSlideIn(); // Initial check in case elements are already in view
+});
 
 
 window.onload = GetTimeReference;
