@@ -9,6 +9,35 @@ body {
     flex-wrap: wrap;
 }
 
+.icon-container {
+    justify-content: center;
+    align-items: center;
+}
+
+.responsive-icon {
+    max-width: 100%;
+    height: auto;
+    width: 10vw; /* Adjust this value as needed */
+}
+
+@media (max-width: 600px) {
+    .responsive-icon {
+        width: 20vw; /* Adjust this value for smaller screens */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .responsive-icon {
+        width: 15vw; /* Adjust this value for medium screens */
+    }
+}
+
+@media (min-width: 1025px) {
+    .responsive-icon {
+        width: 10vw; /* Adjust this value for larger screens */
+    }
+}
+
 .header {
     padding: 20px;
     text-wrap: nowrap;
@@ -36,6 +65,7 @@ body {
     font-size: 3vw;
     font-weight: bold;
     text-align: center;
+    max-width: 100vw; /* Ensure it does not exceed screen width */
 }
 
 .buttonHero {
@@ -48,6 +78,7 @@ body {
     text-wrap: nowrap;
     width: 15vw;
     height: 5vh;
+    max-width: 100vw; /* Ensure it does not exceed screen width */
 }
 
 .button {
@@ -78,6 +109,7 @@ body {
     text-wrap: wrap;
     font-size: 36px;
     color: white;
+    max-width: 100vw; /* Ensure it does not exceed screen width */
 }
 
 .quote {
@@ -123,6 +155,7 @@ body {
 .project {
     font-size: 40px;
     padding: 10%;
+    max-width: 100vw; /* Ensure it does not exceed screen width */
 }
 
 @keyframes slide-in {
@@ -149,6 +182,7 @@ body {
 
 .project-image {
     transition: transform 0.3s ease;
+    max-width: 100vw; /* Ensure it does not exceed screen width */
 }
 
 .project-image:hover {
