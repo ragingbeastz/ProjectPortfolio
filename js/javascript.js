@@ -96,10 +96,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Mouse leave event
+    heroContainer.addEventListener('mouseleave', () => {
+        const fadeOutInterval = setInterval(() => {
+            let allDotsInvisible = true;
+            dots.forEach(dot => {
+                let opacity = parseFloat(dot.style.opacity);
+                if (opacity > 0) {
+                    opacity -= 0.05; // Decrease opacity gradually
+                    dot.style.opacity = opacity;
+                    allDotsInvisible = false;
+                }
+            });
+            if (allDotsInvisible) {
+                clearInterval(fadeOutInterval); // Stop the interval when all dots are invisible
+            }
+        }, 50); // Adjust the interval time for smoother or faster fading
+    });
+
     // Move dots at intervals
     setInterval(moveDots, 10);
 });
-
 
 function GetTimeReference() {
     const time = new Date();
@@ -214,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const backgroundDots = [];
 
     // Create background dots
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 50; i++) {
         const dot = document.createElement('div');
         dot.className = 'background-dot';
         dot.style.left = `${Math.random() * 100}%`;
@@ -257,7 +274,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Move background dots at intervals
     setInterval(moveBackgroundDots, 20);
 });
-
-window.onload = GetTimeReference;
 
 window.onload = GetTimeReference;
