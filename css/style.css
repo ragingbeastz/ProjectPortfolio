@@ -50,6 +50,44 @@ body {
     z-index: 1000;
 }
 
+#scrollButton {
+    padding: 0%;
+    border-radius: 10px;
+    font-size: 3vw; /* Adjust font size based on viewport width */
+    color: white;
+    background-color: #FF4D5A;
+    text-wrap: nowrap;
+    width: 30vw;
+    height: 7vh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    #scrollButton {
+        font-size: 5vw; /* Adjust font size for smaller screens */
+        width: 80vw; /* Adjust width for smaller screens */
+        height: auto; /* Adjust height for smaller screens */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    #scrollButton {
+        font-size: 4vw; /* Adjust font size for medium screens */
+        width: 50vw; /* Adjust width for medium screens */
+        height: auto; /* Adjust height for medium screens */
+    }
+}
+
+@media (min-width: 1025px) {
+    #scrollButton {
+        font-size: 3vw; /* Adjust font size for larger screens */
+        width: 30vw; /* Adjust width for larger screens */
+        height: 7vh; /* Adjust height for larger screens */
+    }
+}
+
 .hero {
     background-color: #1A1A1A;
     transition: background 0.3s ease;
