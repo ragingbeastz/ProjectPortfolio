@@ -1,5 +1,6 @@
 *{
     max-width: 100vw;
+    text-wrap: wrap;
 }
 body {
     font-family: montserrat, sans-serif;
