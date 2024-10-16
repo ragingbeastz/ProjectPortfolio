@@ -1,62 +1,61 @@
-body{
+body {
     font-family: montserrat, sans-serif;
     background-color: #1A1A1A;
-    margin: 0px;
+    margin: 0;
 }
 
-.flex-container{
+.flex-container {
     display: flex;
+    flex-wrap: wrap;
 }
 
-.header{
+.header {
     padding: 20px;
     text-wrap: nowrap;
     background-color: #313131;
 }
 
-.header.main{
+.header.main {
     position: sticky;
     top: 0;
-    z-index: 1000; 
+    z-index: 1000;
 }
 
-.hero{
+.hero {
     background-color: #1A1A1A;
     transition: background 0.3s ease;
     position: relative;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
-.heroText{
+.heroText {
     color: white;
-    text-wrap:  wrap;
+    text-wrap: wrap;
     font-size: 3vw;
     font-weight: bold;
+    text-align: center;
 }
 
-.buttonHero{
-    padding: 2%; 
-    padding-left: 10%; 
-    padding-right: 10%; 
+.buttonHero {
+    padding: 2%;
     background-color: #FF4D5A;
-    color: white; 
-    text-align: center; 
-    font-size: 1vw; 
+    color: white;
+    text-align: center;
+    font-size: 1vw;
     border-radius: 10px;
     text-wrap: nowrap;
-
     width: 15vw;
     height: 5vh;
-    
 }
 
-.button{
-    padding: 2%; 
-    padding-left: 10%; 
-    padding-right: 10%; 
+.button {
+    padding: 2%;
     background-color: #3C82F6;
-    color: white; 
-    text-align: center; 
-    font-size: 18px; 
+    color: white;
+    text-align: center;
+    font-size: 18px;
     border-radius: 10px;
 }
 
@@ -81,38 +80,36 @@ body{
     color: white;
 }
 
-.quote{
+.quote {
     background-color: #E4E7EC;
 }
 
-.quoteText{
+.quoteText {
     font-size: 36px;
     font-weight: lighter;
     color: #1F2937;
     text-wrap: wrap;
-
 }
 
-.callToAction{
+.callToAction {
     background-color: #3C82F6;
     border-radius: 5px;
 }
 
-.contactText1{
+.contactText1 {
     font-weight: bold;
     color: white;
     font-size: 30px;
     padding-top: 1%;
 }
 
-
-.contactText2{
+.contactText2 {
     color: rgb(207, 207, 207);
-    font-size: 15   px;
+    font-size: 15px;
     padding: 10px;
 }
 
-.buttonCalltoAction{
+.buttonCalltoAction {
     background-color: #3C82F6;
     border: solid 2px white;
     color: white;
@@ -121,10 +118,9 @@ body{
     text-wrap: nowrap;
     height: 30px;
     width: 100px;
-
 }
 
-.project{
+.project {
     font-size: 40px;
     padding: 10%;
 }
@@ -177,4 +173,128 @@ body{
     width: 5px;
     height: 5px;
     transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .heroText {
+        font-size: 5vw;
+        padding-bottom: 10%;
+        padding-top: 5%;
+    }
+
+    .buttonHero {
+        font-size: 3vw;
+        width: 50vw;
+        height: auto;
+    }
+
+    .informationText {
+        padding-left: 10%;
+        padding-right: 10%;
+        font-size: 4vw;
+    }
+
+    .project {
+        font-size: 5vw;
+        padding: 5%;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+        padding: 5%;
+    }
+
+    .header .customButtons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .header .customButtons .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .heroText {
+        font-size: 4vw;
+        padding-bottom: 15%;
+        padding-top: 7%;
+    }
+
+    .buttonHero {
+        font-size: 2vw;
+        width: 40vw;
+        height: auto;
+    }
+
+    .informationText {
+        padding-left: 15%;
+        padding-right: 15%;
+        font-size: 3vw;
+    }
+
+    .project {
+        font-size: 4vw;
+        padding: 5%;
+    }
+
+    .project-image {
+        width: 80%;
+        height: auto;
+        padding: 5%;
+    }
+
+    .header .customButtons {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .header .customButtons .btn {
+        width: auto;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1025px) {
+    .heroText {
+        font-size: 3vw;
+        padding-bottom: 20%;
+        padding-top: 10%;
+    }
+
+    .buttonHero {
+        font-size: 1vw;
+        width: 15vw;
+        height: 5vh;
+    }
+
+    .informationText {
+        padding-left: 25%;
+        padding-right: 25%;
+        font-size: 2vw;
+    }
+
+    .project {
+        font-size: 3vw;
+        padding: 10%;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+        padding: 10%;
+    }
+
+    .header .customButtons {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .header .customButtons .btn {
+        width: auto;
+        text-align: center;
+    }
 }
