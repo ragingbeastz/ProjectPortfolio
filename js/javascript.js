@@ -275,4 +275,38 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(moveBackgroundDots, 20);
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = {
+        homeButton: document.getElementById('home'),
+        aboutButton: document.getElementById('about'),
+        projectButton: document.getElementById('projectSection'),
+        contactButton: document.getElementById('contact')
+    };
+
+    const buttons = {
+        homeButton: document.getElementById('homeButton'),
+        aboutButton: document.getElementById('aboutButton'),
+        projectButton: document.getElementById('projectButton'),
+        contactButton: document.getElementById('contactButton')
+    };
+
+    function updateActiveButton() {
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+        for (const [buttonId, section] of Object.entries(sections)) {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                buttons[buttonId].classList.add('active');
+            } else {
+                buttons[buttonId].classList.remove('active');
+            }
+        }
+    }
+
+    window.addEventListener('scroll', updateActiveButton);
+    updateActiveButton(); // Initial check
+});
+
 window.onload = GetTimeReference;
