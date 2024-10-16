@@ -12,201 +12,232 @@
 </head>
 
 <body>
-    <!-- Hero -->
-    <div id="home">
-        <div class="flex-container hero"
-            style="flex-direction: column; height: 100vh; width: auto; justify-content: center; align-items: center; flex-basis: auto; gap: 0px;"
-            id="heroContainer">
-            <div class="flex-container" style="flex-direction: column; z-index: 1; justify-content: center;">
-                <div class="heroText" style="padding-bottom: 20%; padding-top: 10%;">Good <span id="greeting"></span>.
-                    I'm
-                    <span style="color: #FF4D5A;">Dimithri</span>, <br>a student at the University of Hull studying
-                    <br><span style="color: #FF4D5A;">Robotics and Artifical Intelligience</span>
+        <!-- Hero -->
+        <div id="home">
+            <div class="flex-container hero"
+                style="flex-direction: column; height: 100vh; width: auto; justify-content: center; align-items: center; flex-basis: auto; gap: 0px;"
+                id="heroContainer">
+                <div class="flex-container" style="flex-direction: column; z-index: 1; justify-content: center;">
+                    <div class="heroText" style="padding-bottom: 20%; padding-top: 10%;">Good <span
+                            id="greeting"></span>.
+                        I'm
+                        <span style="color: #FF4D5A;">Dimithri</span>, <br>a student at the University of Hull studying
+                        <br><span style="color: #FF4D5A;">Robotics and Artifical Intelligience</span>
+                    </div>
+                    <div class="customButtons" style="align-self: center;">
+                        <button class="customButtons btn btn-5" id="scrollButton"
+                            style="padding: 0%; border-radius: 10px; font-size: 50px; color: white; background-color: #FF4D5A; text-wrap: nowrap; width: 30vw; height: 7vh;">
+                            View My Projects
+                        </button>
+                    </div>
                 </div>
+            </div>
+        </div>
+
+
+        <!-- Header -->
+        <div class="flex-container header main" id="header"
+            style="justify-content: flex-end; background-color: #313131;">
+            <div class="flex-container">
+                <div class="flex-container customButtons" style=" gap: 10px; padding: 0%; margin-bottom: 0%;">
+
+                    <div id="homeButton" class="customButtons btn btn-2" style="color: #B6BAC1; margin-bottom: 0%;">Home
+                    </div>
+                    <div id="aboutButton" class="customButtons btn btn-2" style="color: #B6BAC1; margin-bottom: 0%;">
+                        About
+                        Me</div>
+                    <div id="projectButton" class="customButtons btn btn-2" style="color: #B6BAC1; margin-bottom: 0%;">
+                        Projects</div>
+                    <div id="contactButton" class="customButtons btn btn-2" style="color: #B6BAC1; margin-bottom: 0%;">
+                        Contact Me</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="backgroundDotsContainer"></div>
+        
+        <div id="mainBody">
+
+            <!-- Information -->
+            <div id="about" class="flex-container slide-in"
+                style="flex-direction: column; justify-content: center; align-items: center;">
+                <div
+                    style="padding: 20px; font-size: 50px; color: white; font-weight:900; padding-bottom: 2%; padding-top: 3%;">
+                    About Me</div>
+                <div><img src="./Assets/headIcon.png"
+                        style="filter: blur(0.5px); height: 10vw; width: auto; padding-bottom: 10%;"></div>
+                <div class="informationText" style="padding-left: 25%; padding-right: 25%;">
+                    I am a second-year student at the University of Hull,
+                    pursuing a degree in Robotics and Artificial Intelligence.
+                    Through my studies, I have developed strong programming skills in C# and Python,
+                    alongside learning HTML, CSS, and JavaScript via the Odin Project. Outside of academics, I enjoy
+                    socializing,
+                    cooking, and playing games.
+                </div>
+                <div class="flex-container" style="padding-top: 5%; gap: 5%;">
+                    <div><img src="./Assets/cSharpIcon.png" style=" height: 10vw; width: auto;"></div>
+                    <div><img src="./Assets/pythonIcon.png" style=" height: 10vw; width: auto;"></div>
+                </div>
+                <div class="flex-container" style="padding-top: 2%; gap: 5%;">
+                    <div><img src="./Assets/htmlIcon.png" style=" height: 10vw; width: auto;"></div>
+                    <div><img src="./Assets/cssIcon.png" style="height: 10vw; width: auto;"></div>
+                    <div><img src="./Assets/javascriptIcon.png" style=" height: 10vw; width: auto; padding-bottom: 5%;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-container header" id="header"
+                style="justify-content: flex-end; background-color: #313131; padding-bottom: 3%;">
+            </div>
+
+            <!-- Projects Section -->
+            <div id="projectSection" class="flex-container"
+                style="flex-direction: column; padding-top: 0%; padding: 5%;">
+                <div
+                    style="padding: 20px; font-size: 75px; color: white; font-weight: 900; text-align: center; text-decoration: underline;">
+                    Projects
+                </div>
+
+                <!-- Younger Ring Project -->
+                <div class="project slide-in"
+                    style="margin-bottom: 20px; display: flex; flex-direction: row; align-items: center;">
+                    <div class="flex-container" style="justify-content: start; flex: 1;">
+
+                        <!-- Text -->
+                        <div class="flex-container"
+                            style="text-align: center; flex-direction: column; background-color: #313131; padding-right: 0%; border-radius: 15px; padding: 5%; justify-content: space-between; flex: 0.33;">
+                            <div class="flex-container" style="align-self: flex-start;">
+                                <h2 style="color: #FF4D5A;">Younger Ring</h2>
+                            </div>
+                            <div class="flex-container">
+                                <p style="color: white; font-size: 20px;">
+                                    A Unity C# Game made to showcase my programming skills and for fun. The game is a 2D
+                                    platformer where the player must reach the end.
+                                </p>
+                            </div>
+                            <div class="flex-container" style="flex-direction: column; gap: 10px;">
+                                <a href="./Assets/YoungerRingWeb/index.html" class="projectButtons btn draw-border"
+                                    target="_blank" style="color: #FF4D5A; font-size: 20px; padding: 10px;">LIVE APP</a>
+                                <a href="https://github.com/ragingbeastz/YoungerRingCode"
+                                    class="projectButtons btn draw-border" target="_blank"
+                                    style="color: #FF4D5A; font-size: 20px; padding: 10px;">GITHUB PAGE</a>
+                            </div>
+                        </div>
+
+                        <!-- Image -->
+                        <div style="flex: 1; display: flex; justify-content: flex-start;">
+                            <a href="https://github.com/ragingbeastz/YoungerRingCode" target="_blank">
+                                <img src="./Assets/youngerRingExample.png" class="project-image"
+                                    style="width: 100%; height: auto; padding: 10%; padding-left: 0%; background-color: #3216BB; border-radius: 5px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faster Flights Project -->
+                <div class="project slide-in"
+                    style="margin-bottom: 20px; display: flex; flex-direction: row; align-items: center;">
+                    <div class="flex-container" style="justify-content: start; flex: 1;">
+                        <!-- Image -->
+                        <div style="flex: 1; display: flex; justify-content: flex-start;">
+                            <a href="https://github.com/ragingbeastz/FasterFlights" target="_blank">
+                                <img src="./Assets/fasterFlightsExample.png" class="project-image"
+                                    style="width: 100%; height: auto; padding: 10%; padding-left: 0%; padding-right: 0%; background-color: #3216BB; border-radius: 5px;">
+                            </a>
+                        </div>
+                        <!-- Text -->
+                        <div class="flex-container"
+                            style="text-align: center; flex-direction: column; background-color: #313131; padding-right: 0%; border-radius: 15px; padding: 5%; justify-content: space-between; flex: 0.33;">
+                            <div class="flex-container" style="align-self: flex-start;">
+                                <h2 style="color: #FF4D5A;">Faster Flights</h2>
+                            </div>
+                            <div class="flex-container">
+                                <p style="color: white; font-size: 20px;">
+                                    Faster Flights is a Python-based project aimed at providing efficiency with
+                                    searching for Ryanair flights from the Uk to Europe. Includes both Excel and Android
+                                    based implementations.
+                                </p>
+                            </div>
+                            <div class="flex-container" style="flex-direction: column; gap: 10px;">
+                                <a href="./FasterFlightsWebsite/public/index.html"
+                                    class="projectButtons btn draw-border" target="_blank"
+                                    style="color: #FF4D5A; font-size: 20px; padding: 10px;">LIVE APP</a>
+                                <a href="https://github.com/ragingbeastz/FasterFlights"
+                                    class="projectButtons btn draw-border" target="_blank"
+                                    style="color: #FF4D5A; font-size: 20px; padding: 10px;">GITHUB PAGE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- Website Github -->
+        <div class="flex-container header" id="header" style="justify-content: center; background-color: #313131;">
+            <div class="flex-container">
+                <p style="color: white; font-size: 30px;">You can also view the HTML, CSS and Javascript Github for this
+                    webpage <a href="https://github.com/ragingbeastz/ProjectPortfolio"
+                        style="color: #FF4D5A; text-decoration:none; " target="_blank">here</a>.</p>
+            </div>
+        </div>
+
+        <!-- Contact Me Section -->
+        <div id="contact" class="flex-container"
+            style="flex-direction: column; justify-content: center; align-items: center;">
+            <div class="contactText1">Contact</div>
+            <div class="contactText2">
+                Have a project in mind or any employment opportunities? Feel free to contact me.
+            </div>
+            <form name="contact" method="POST" data-netlify="true" class="flex-container"
+                style="flex-direction: column; padding: 5%; padding-bottom: 0%; gap: 5px; padding-top: 1%; width: 30%;">
+
+                <!-- Hidden input for Netlify's honeypot to prevent spam -->
+                <input type="hidden" name="form-name" value="contact">
+                <p style="display:none;">
+                    <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+                </p>
+
+                <input type="text" name="name" placeholder="Name"
+                    style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828;"
+                    required>
+                <input type="email" name="email" placeholder="Email"
+                    style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828;"
+                    required>
+                <textarea name="message" placeholder="Message"
+                    style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828; padding-bottom: 10%;"
+                    required></textarea>
+
                 <div class="customButtons" style="align-self: center;">
-                    <button class="customButtons btn btn-5" id="scrollButton"
-                        style="padding: 0%; border-radius: 10px; font-size: 50px; color: white; background-color: #FF4D5A; text-wrap: nowrap; width: 30vw; height: 7vh;">
-                        View My Projects
+                    <button type="submit" class="customButtons btn btn-5"
+                        style="padding: 0%; border-radius: 10px; font-size: 25px; color: white; background-color: #FF4D5A; text-wrap: nowrap; width: 5vw; height: 5vh; align-self: center; margin-top: 20%;">
+                        Send
                     </button>
                 </div>
-            </div>
+            </form>
         </div>
+
     </div>
 
-
-    <!-- Header -->
-    <div class="flex-container header main" id="header" style="justify-content: flex-end; background-color: #313131;">
-        <div class="flex-container">
-            <div class="flex-container customButtons" style=" gap: 10px; padding: 0%; margin-bottom: 0%;">
-
-                <div id="homeButton" class="customButtons btn btn-2" style="color: #B6BAC1; margin-bottom: 0%;">Home
+        <!-- Footer -->
+        <div class="flex-container footer"
+            style="justify-content: center; align-items: center; flex-direction: column;">
+            <div class="flex-container" style="gap: 10px;">
+                <div>
+                    <a href="https://github.com/ragingbeastz" class="footer glowButton">
+                        <img src="./Assets/githubSymbol.png" style="width: 60px; height: 60px;">
+                    </a>
                 </div>
-                <div id="aboutButton" class="customButtons btn btn-2" style="color: #B6BAC1; margin-bottom: 0%;">About
-                    Me</div>
-                <div id="projectButton" class="customButtons btn btn-2" style="color: #B6BAC1; margin-bottom: 0%;">
-                    Projects</div>
-                <div id="contactButton" class="customButtons btn btn-2" style="color: #B6BAC1; margin-bottom: 0%;">
-                    Contact Me</div>
-            </div>
-        </div>
-    </div>
-
-    <div id="mainBody">
-        <!-- Information -->
-        <div id="about" class="flex-container slide-in"
-            style="flex-direction: column; justify-content: center; align-items: center;">
-            <div
-                style="padding: 20px; font-size: 50px; color: white; font-weight:900; padding-bottom: 2%; padding-top: 3%;">
-                About Me</div>
-            <div><img src="./Assets/headIcon.png"
-                    style="filter: blur(0.5px); height: 10vw; width: auto; padding-bottom: 10%;"></div>
-            <div class="informationText" style="padding-left: 25%; padding-right: 25%;">
-                I am a second-year student at the University of Hull,
-                pursuing a degree in Robotics and Artificial Intelligence.
-                Through my studies, I have developed strong programming skills in C# and Python,
-                alongside learning HTML, CSS, and JavaScript via the Odin Project. Outside of academics, I enjoy
-                socializing,
-                cooking, and playing games.
-            </div>
-            <div class="flex-container" style="padding-top: 5%; gap: 5%;">
-                <div><img src="./Assets/cSharpIcon.png" style=" height: 10vw; width: auto;"></div>
-                <div><img src="./Assets/pythonIcon.png" style=" height: 10vw; width: auto;"></div>
-            </div>
-            <div class="flex-container" style="padding-top: 2%; gap: 5%;">
-                <div><img src="./Assets/htmlIcon.png" style=" height: 10vw; width: auto;"></div>
-                <div><img src="./Assets/cssIcon.png" style="height: 10vw; width: auto;"></div>
-                <div><img src="./Assets/javascriptIcon.png" style=" height: 10vw; width: auto; padding-bottom: 5%;">
-                </div>
-            </div>
-        </div>
-
-        <div class="flex-container header" id="header"
-            style="justify-content: flex-end; background-color: #313131; padding-bottom: 3%;">
-        </div>
-
-    <!-- Projects Section -->
-    <div id="projectSection" class="flex-container" style="flex-direction: column; padding-top: 0%; padding: 5%;">
-        <div style="padding: 20px; font-size: 75px; color: white; font-weight: 900; text-align: center; text-decoration: underline;">
-            Projects
-        </div>
-
-        <!-- Younger Ring Project -->
-        <div class="project slide-in" style="margin-bottom: 20px; display: flex; flex-direction: row; align-items: center;">
-            <div class="flex-container" style="justify-content: start; flex: 1;">
-
-                <!-- Text -->
-                <div class="flex-container" style="text-align: center; flex-direction: column; background-color: #313131; padding-right: 0%; border-radius: 15px; padding: 5%; justify-content: space-between; flex: 0.33;">
-                    <div class="flex-container" style="align-self: flex-start;">
-                        <h2 style="color: #FF4D5A;">Younger Ring</h2>
-                    </div>
-                    <div class="flex-container">
-                        <p style="color: white; font-size: 20px;">
-                            A Unity C# Game made to showcase my programming skills and for fun. The game is a 2D platformer where the player must reach the end.
-                        </p>
-                    </div>
-                    <div class="flex-container" style="flex-direction: column; gap: 10px;">
-                        <a href="./Assets/YoungerRingWeb/index.html" class="projectButtons btn draw-border" target="_blank" style="color: #FF4D5A; font-size: 20px; padding: 10px;">LIVE APP</a>
-                        <a href="https://github.com/ragingbeastz/YoungerRingCode" class="projectButtons btn draw-border" target="_blank" style="color: #FF4D5A; font-size: 20px; padding: 10px;">GITHUB PAGE</a>
-                    </div>
-                </div>
-
-                <!-- Image -->
-                <div style="flex: 1; display: flex; justify-content: flex-start;">
-                    <a href="https://github.com/ragingbeastz/YoungerRingCode" target="_blank">
-                        <img src="./Assets/youngerRingExample.png" class="project-image" style="width: 100%; height: auto; padding: 10%; padding-left: 0%; background-color: #3216BB; border-radius: 5px;">
+                <div>
+                    <a href="mailto:dimithriweera@gmail.com" class="glowButton">
+                        <img src="./Assets/mailSymbol.png" style="width: 60px; height: 60px;">
                     </a>
                 </div>
             </div>
+            <div style="padding-top: 1%;">Dimithri Weerasekara ©2024</div>
         </div>
-
-        <!-- Faster Flights Project -->
-        <div class="project slide-in" style="margin-bottom: 20px; display: flex; flex-direction: row; align-items: center;">
-            <div class="flex-container" style="justify-content: start; flex: 1;">
-                <!-- Image -->
-                <div style="flex: 1; display: flex; justify-content: flex-start;">
-                    <a href="https://github.com/ragingbeastz/FasterFlights" target="_blank">
-                        <img src="./Assets/fasterFlightsExample.png" class="project-image" style="width: 100%; height: auto; padding: 10%; padding-left: 0%; padding-right: 0%; background-color: #3216BB; border-radius: 5px;">
-                    </a>
-                </div>
-                <!-- Text -->
-                <div class="flex-container" style="text-align: center; flex-direction: column; background-color: #313131; padding-right: 0%; border-radius: 15px; padding: 5%; justify-content: space-between; flex: 0.33;">
-                    <div class="flex-container" style="align-self: flex-start;">
-                        <h2 style="color: #FF4D5A;">Faster Flights</h2>
-                    </div>
-                    <div class="flex-container">
-                        <p style="color: white; font-size: 20px;">
-                            Faster Flights is a Python-based project aimed at providing efficiency with searching for Ryanair flights from the Uk to Europe. Includes both Excel and Android based implementations.
-                        </p>
-                    </div>
-                    <div class="flex-container" style="flex-direction: column; gap: 10px;">
-                        <a href="./FasterFlightsWebsite/public/index.html" class="projectButtons btn draw-border" target="_blank" style="color: #FF4D5A; font-size: 20px; padding: 10px;">LIVE APP</a>
-                        <a href="https://github.com/ragingbeastz/FasterFlights" class="projectButtons btn draw-border" target="_blank" style="color: #FF4D5A; font-size: 20px; padding: 10px;">GITHUB PAGE</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-        </div>
-    <!-- Website Github -->
-    <div class="flex-container header" id="header" style="justify-content: center; background-color: #313131;">
-        <div class="flex-container">
-            <p style="color: white; font-size: 30px;">You can also view the HTML, CSS and Javascript Github for this
-                webpage <a href="https://github.com/ragingbeastz/ProjectPortfolio"
-                    style="color: #FF4D5A; text-decoration:none; " target="_blank">here</a>.</p>
-        </div>
-    </div>
-
-    <!-- Contact Me Section -->
-    <div id="contact" class="flex-container"
-        style="flex-direction: column; justify-content: center; align-items: center;">
-        <div class="contactText1">Contact</div>
-        <div class="contactText2">
-            Have a project in mind or any employment opportunities? Feel free to contact me.
-        </div>
-        <form name="contact" method="POST" data-netlify="true" class="flex-container" 
-            style="flex-direction: column; padding: 5%; padding-bottom: 0%; gap: 5px; padding-top: 1%; width: 30%;">
-            
-            <!-- Hidden input for Netlify's honeypot to prevent spam -->
-            <input type="hidden" name="form-name" value="contact">
-            <p style="display:none;">
-                <label>Don’t fill this out if you're human: <input name="bot-field"></label>
-            </p>
-            
-            <input type="text" name="name" placeholder="Name"
-                style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828;" required>
-            <input type="email" name="email" placeholder="Email"
-                style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828;" required>
-            <textarea name="message" placeholder="Message"
-                style="padding: 10px; border-radius: 5px; border: none; color: white; background-color: #282828; padding-bottom: 10%;" required></textarea>
-
-            <div class="customButtons" style="align-self: center;">
-                <button type="submit" class="customButtons btn btn-5"
-                    style="padding: 0%; border-radius: 10px; font-size: 25px; color: white; background-color: #FF4D5A; text-wrap: nowrap; width: 5vw; height: 5vh; align-self: center; margin-top: 20%;">
-                    Send
-                </button>
-            </div>
-        </form>
-    </div>
-
-    <!-- Footer -->
-    <div class="flex-container footer" style="justify-content: center; align-items: center; flex-direction: column;">
-        <div class="flex-container" style="gap: 10px;">
-            <div>
-                <a href="https://github.com/ragingbeastz" class="footer glowButton">
-                    <img src="./Assets/githubSymbol.png" style="width: 60px; height: 60px;">
-                </a>
-            </div>
-            <div>
-                <a href="mailto:dimithriweera@gmail.com" class="glowButton">
-                    <img src="./Assets/mailSymbol.png" style="width: 60px; height: 60px;">
-                </a>
-            </div>
-        </div>
-        <div style="padding-top: 1%;">Dimithri Weerasekara ©2024</div>
-    </div>
     <script src="./js/javascript.js"></script>
+
 </body>
 
 </html>

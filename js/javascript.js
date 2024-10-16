@@ -179,14 +179,12 @@ contactButton.addEventListener('click', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const slideInElements = document.querySelectorAll('.slide-in');
-    console.log('Slide-in elements:', slideInElements);
 
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
         const inViewport = (
             rect.top < window.innerHeight && rect.bottom > 0
         );
-        console.log('Element:', element, 'Rect:', rect, 'is in viewport:', inViewport);
         return inViewport;
     }
 
@@ -194,7 +192,6 @@ document.addEventListener('DOMContentLoaded', function() {
         slideInElements.forEach(element => {
             if (isInViewport(element)) {
                 if (!element.classList.contains('visible')) {
-                    console.log('Adding visible class to element:', element);
                     element.classList.add('visible');
                 }
             }
@@ -202,13 +199,65 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.addEventListener('scroll', function() {
-        console.log('Scroll event detected');
         checkSlideIn();
     });
 
-    console.log('Initial check for slide-in elements');
     checkSlideIn(); // Initial check in case elements are already in view
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const backgroundDotsContainer = document.getElementById('backgroundDotsContainer');
+    if (!backgroundDotsContainer) {
+        console.error('backgroundDotsContainer not found');
+        return;
+    }
+    const backgroundDots = [];
+
+    // Create background dots
+    for (let i = 0; i < 100; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'background-dot';
+        dot.style.left = `${Math.random() * 100}%`;
+        dot.style.top = `${Math.random() * 100}%`;
+        backgroundDotsContainer.appendChild(dot);
+        backgroundDots.push(dot);
+        console.log(`Dot created at (${dot.style.left}, ${dot.style.top})`); // Debug log
+    }
+
+    // Function to move background dots in straight lines
+    function moveBackgroundDots() {
+        const speed = 0.02; // Speed variable
+        backgroundDots.forEach(dot => {
+            let x = parseFloat(dot.style.left);
+            let y = parseFloat(dot.style.top);
+
+            if (!dot.dx || !dot.dy) {
+                const angle = Math.random() * 2 * Math.PI; // Random angle for direction
+                dot.dx = speed * Math.cos(angle); // Speed in x direction
+                dot.dy = speed * Math.sin(angle); // Speed in y direction
+            }
+
+            x += dot.dx;
+            y += dot.dy;
+
+            if (x < 0 || x > 100) {
+                dot.dx = -dot.dx; // Reverse direction on x-axis
+                x = Math.max(0, Math.min(x, 100));
+            }
+            if (y < 0 || y > 100) {
+                dot.dy = -dot.dy; // Reverse direction on y-axis
+                y = Math.max(0, Math.min(y, 100));
+            }
+
+            dot.style.left = `${x}%`;
+            dot.style.top = `${y}%`;
+        });
+    }
+
+    // Move background dots at intervals
+    setInterval(moveBackgroundDots, 20);
+});
+
+window.onload = GetTimeReference;
 
 window.onload = GetTimeReference;
